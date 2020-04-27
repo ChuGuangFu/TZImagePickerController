@@ -169,7 +169,7 @@
         self.allowTakePicture = YES;
         self.allowTakeVideo = YES;
         self.videoMaximumDuration = 10 * 60;
-        self.sortAscendingByModificationDate = YES;
+        self.sortAscendingByModificationDate = NO;
         self.autoDismiss = YES;
         self.columnNumber = columnNumber;
         [self configDefaultSetting];

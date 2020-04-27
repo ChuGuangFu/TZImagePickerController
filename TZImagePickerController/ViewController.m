@@ -310,9 +310,6 @@
     imagePickerVc.allowPickingGif = self.allowPickingGifSwitch.isOn;
     imagePickerVc.allowPickingMultipleVideo = self.allowPickingMuitlpleVideoSwitch.isOn; // 是否可以多选视频
     
-    // 4. 照片排列按修改时间升序
-    imagePickerVc.sortAscendingByModificationDate = self.sortAscendingSwitch.isOn;
-    
     // imagePickerVc.minImagesCount = 3;
     // imagePickerVc.alwaysEnableDoneBtn = YES;
     
@@ -480,7 +477,6 @@
     NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
     
     TZImagePickerController *tzImagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
-    tzImagePickerVc.sortAscendingByModificationDate = self.sortAscendingSwitch.isOn;
     [tzImagePickerVc showProgressHUD];
     if ([type isEqualToString:@"public.image"]) {
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
